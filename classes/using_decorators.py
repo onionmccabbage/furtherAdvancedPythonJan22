@@ -9,6 +9,10 @@ def showArgs(f): #this decorator takes a function and shows us the arguments of 
         return f(*args, **kwargs)
     return new_func # note - no brackets
 
+def other():
+    pass
+
+@other # decorators are called in strict order
 @showArgs # use our decorator
 def addInts(a, b):
     return a+b
@@ -18,6 +22,8 @@ def raisePower(m, n):
     return m**n
 
 if __name__ == '__main__':
+    f = addInts # does this circumvent the decorator? NO!!
     x, y = (1,2)
-    print(addInts(x, y)) # 3
+    print(addInts(x, y)) # decorator is invoked BEFORE the decorated function
     print(raisePower(n=3, m=10)) # 1000
+    print(f(x,y)) # still calls the decorated version!

@@ -94,7 +94,7 @@ class ConcreteObserverB(Observer):
 
 class ConcreteObserverC(Observer):
     def update(self, subject: Subject):
-        if subject._state >= 8:
+        if subject._state >= 7:
             print("ConcreteObserverC: Reacted to 'exceeds seven' event")
 
 if __name__ == "__main__":
