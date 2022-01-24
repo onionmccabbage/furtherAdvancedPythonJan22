@@ -34,7 +34,7 @@ class Bank(Payment): # this implements our abstract class
 
 class DebitCard(Payment):
     def __init__(self):
-        self.bank = Bank() # now ourdebit card is a proxy for the bank
+        self.bank = Bank() # now our debit card is a proxy for the bank
     def do_pay(self):
         card = input('Swipe, Tap or Insert card?')
         self.bank.setCard(card)
