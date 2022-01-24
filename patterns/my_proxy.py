@@ -41,8 +41,19 @@ class DebitCard(Payment):
         # call the do_pay method of the bank (for which we are a proxy)
         return self.bank.do_pay()
 
-class You():
-    pass
+class You(): # this will be the client of our proxy
+    def __init__(self):
+        print('time to buy stuff...')
+        self.debitCard = DebitCard() # we instantiate our proxy (proxy for the bank)
+        self.isPurchased = None
+    def makePayment(self):
+        self.isPurchased = self.debitCard.do_pay() # use our proxy
+    def __del__(self): # __del__ is called every time an instance completes. Used for clean-up
+        if self.isPurchased:
+            print('we bought something!!')
+        else:
+            print('lend me a fiver?')
 
 if __name__ == '__main__':
-    pass
+    you =You() # we have an instance of the client
+    you.makePayment() # try to use opur proxy
