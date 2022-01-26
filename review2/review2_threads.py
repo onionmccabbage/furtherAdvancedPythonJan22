@@ -5,10 +5,6 @@ import time
 
 from weatherService import TempGetter
 
-# CITIES = [
-#     'Athlone', 'Dublin', 'Galway', 'Belfast', 
-#     'London', 'Cork', 'Lund', 'Kista'
-# ]
 CITIES = [
     'Athlone', 'Canberra', 'London', 'Athens'
 ]

@@ -33,11 +33,11 @@ class TicketSeller(threading.Thread):
         time.sleep(random.randint(0, 4)/4) # 0, 0.25, 0.5 or 0.75 seconds
 
 if __name__ == '__main__':
-    ticketsAvaiable = 1000 # these will be shared by all isntances of the ticket seller
+    ticketsAvaiable = 1000000 # these will be shared by all isntances of the ticket seller
     # we need a semaphore
-    sem = threading.Semaphore(16) # how many can share this semaphore lock?
+    sem = threading.Semaphore(64) # how many can share this semaphore lock?
     sellers = []
-    for i in range(4): # play with this number
+    for i in range(10000): # play with this number
         seller = TicketSeller(sem)
         seller.start()
         sellers.append(seller)
