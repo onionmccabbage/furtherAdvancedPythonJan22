@@ -1,0 +1,24 @@
+Review 3 - Services, Profiling and Timing
+=========================================
+For this exercise, use any of the previous review exercises, or my solutions to those exercises
+(or write new code if you prefer)
+
+Gather some memory performance metrics for your existing code
+(use @profile to decorate some of your functions)
+Take a baseline average for the code as it is now
+Experiment with alternative structures for some functions to see if their profile can be improved
+For example, use a 'city' generator compared to creating a collection of cities
+
+Make the weather app run as part of a Flask server
+Requests can be passed in for the city, and nicely formatted text is returned
+Don't just return the JSON from openweathermap, tidy it up and return a few key values
+
+Optional
+--------
+Write a module called preparation.py which asks the user to enter some default values 
+(to be uses in the weather app)
+This module will provide defaults for cities, which metrics are required etc.
+(possibly in a named tuple with sensible defaults)
+Persist these values in a simple text file
+When the weather app starts, read this configuration file and use the defaults
+Also explore passing the 'city' value in as sys.argv when you run your code

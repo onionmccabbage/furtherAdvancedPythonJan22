@@ -31,17 +31,18 @@ Tuesday
 > @ decorator to make classes and methods thread safe (using Lock)
 
 Wednesday
-- multiprocessing
-- profiling
+> multiprocessing
+> profiling
   see https://pypi.org/project/memory-profiler/
-- testing: doctest, unittest, pytest
+> testing: doctest, unittest, pytest
   pytest https://docs.pytest.org/en/latest/
-- Behaviour-driven development BDD
-- microservices
-- Flask
+> Behaviour-driven development BDD
+> microservices
+> Flask
   https://flask-restful.readthedocs.io/en/latest/quickstart.html#full-example
-- review exercise: especially opportunities for testing
-- overview of Django
+> review exercise: especially opportunities for testing
+  careful - @profile must be DIRECTLY above the function to be profiled
+> overview of Django
   free book on recent Django: https://www.tangowithdjango.com/book17/
 - brief overview of Anaconda (in preparation for Thurs/Friday)
 - ... or other ways to write in notebooks!!
